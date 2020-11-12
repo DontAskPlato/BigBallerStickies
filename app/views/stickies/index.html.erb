@@ -1,0 +1,32 @@
+<h1> This is the only page </h1>
+
+<%= %>
+<form action="/stickies/index" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+    <div class="sticky">
+    <textarea name="text" class="note"> </textarea>
+    <div class="stickyfooter">
+        <button onclick="addNote">Add</button>
+        <button onclick="deleteNote">Delete</button>
+        <button>Save</button>
+    </div>
+</div>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Previous Stickies</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sticketh.each do |sticketh| %>
+      <tr>
+        <td class="sticky"><%= sticketh.text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

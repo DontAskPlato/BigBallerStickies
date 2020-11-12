@@ -1,0 +1,24 @@
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sticketh.each do |sticketh| %>
+      <tr>
+        <td><%= sticketh.title %></td>
+        <td><%= sticketh.description %></td>
+        <td><%= link_to 'Show', sticketh %></td>
+        <td><%= link_to 'Edit', edit_sticketh_path(sticketh) %></td>
+        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

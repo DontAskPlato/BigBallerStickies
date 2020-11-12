@@ -1,0 +1,2 @@
+class Sticketh < ApplicationRecord
+end
